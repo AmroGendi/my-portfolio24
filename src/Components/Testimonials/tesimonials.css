@@ -1,0 +1,139 @@
+:root {
+  --primaryColor: #ff3452;
+  --secondaryColor: #ece0c8;
+  --pColor: #282c34;
+  --BgColor: #f6f7f8;
+  --txtColor: #21252b;
+  --greyColor: #6e6e6e;
+  --nbBgColor: hsl(40, 49%, 85%, 50%);
+  --headerHeight: 3rem;
+  --box-shadow: 0 2px 4px hsl(216, 13%, 15%, 50%);
+  --background: linear-gradient(#f6f7f8, hsl(40, 49%, 85%, 50%));
+  --backgroundOp: linear-gradient(hsl(40, 49%, 85%), #f6f7f8);
+}
+
+.tesimonials .testiContainer {
+  margin-top: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.tesimonials .testiContainer .singleTesti {
+  padding: 1.5rem 1.5rem 0;
+  border-radius: 0 0 10px;
+  height: 100%;
+  width: 100%;
+  background: var(--background);
+  border-top: 5px solid var(--primaryColor);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.tesimonials .testiContainer .singleTesti:hover {
+  scale: 1.05;
+  transform: translateY(11px);
+  box-shadow: var(--box-shadow);
+}
+.tesimonials .testiContainer .singleTesti .imgDiv {
+  padding-bottom: 1rem;
+  align-items: center;
+}
+.tesimonials .testiContainer .singleTesti .imgDiv img {
+  width: 75px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid var(--secondaryColor);
+  box-shadow: 0 0 5px 2px var(--primaryColor);
+}
+.tesimonials .testiContainer .singleTesti .imgDiv .userInfo {
+  flex-direction: column;
+  margin-left: 1.5rem;
+}
+.tesimonials .testiContainer .singleTesti .imgDiv .userInfo .name {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: var(--primaryColor);
+  font-weight: 600;
+}
+.tesimonials .testiContainer .singleTesti .imgDiv .userInfo .position, .tesimonials .testiContainer .singleTesti .imgDiv .userInfo .cName {
+  color: var(--pColor);
+  font-weight: 500;
+}
+.tesimonials .testiContainer .singleTesti .quoteDiv {
+  position: relative;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--greyColor);
+}
+.tesimonials .testiContainer .singleTesti .quoteDiv .iconq {
+  position: absolute;
+  color: var(--primaryColor);
+  right: 0;
+  top: -155px;
+  font-size: 2.5rem;
+  background: var(--BgColor);
+  width: 50px;
+  height: 50px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  border: 2px solid var(--primaryColor);
+}
+.tesimonials .testiContainer .singleTesti .quoteDiv .txt {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--greyColor);
+  margin: 0.5rem 0;
+}
+.tesimonials .testiContainer .singleTesti .Info {
+  align-items: center;
+  padding: 1rem 0;
+}
+.tesimonials .testiContainer .singleTesti .Info .compInfo {
+  display: flex;
+  flex-direction: column;
+}
+.tesimonials .testiContainer .singleTesti .Info .companyImg {
+  align-items: center;
+  margin-right: 1rem;
+  width: 40px;
+}
+.tesimonials .testiContainer .singleTesti .Info .cName {
+  color: var(--pColor);
+  font-size: 0.7rem;
+}
+
+@media screen and (min-width: 400px) {
+  .tesimonials {
+    align-items: center;
+  }
+  .tesimonials .testiContainer {
+    gap: 4rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (min-width: 600px) {
+  .tesimonials .testiContainer {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 769px) {
+  .tesimonials {
+    width: 70%;
+    margin: auto;
+  }
+  .tesimonials .testiContainer {
+    padding-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1150px) {
+  .tesimonials .testiContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1240px) {
+  .tesimonials {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}/*# sourceMappingURL=tesimonials.css.map */

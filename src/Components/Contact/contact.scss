@@ -1,0 +1,165 @@
+:root {
+  --primaryColor: #ff3452;
+  --secondaryColor: #ece0c8;
+  --pColor: #282c34;
+  --BgColor: #f6f7f8;
+  --txtColor: #21252b;
+  --greyColor: #6e6e6e;
+  --nbBgColor: hsl(40, 49%, 85%, 50%);
+  --headerHeight: 3rem;
+  --box-shadow: 0 2px 4px hsl(216, 13%, 15%, 50%);
+  --background: linear-gradient(#f6f7f8, hsl(40, 49%, 85%, 50%));
+  --backgroundOp: linear-gradient(hsl(40, 49%, 85%), #f6f7f8);
+}
+
+.contact {
+  .contactContainer {
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+
+    .socialContacts {
+      justify-content: center;
+
+      h3 {
+        color: var(--primaryColor);
+        padding: 1rem 0;
+        text-align: center;
+      }
+      .cards {
+        gap: 1rem;
+        justify-content: center;
+        .card {
+          display: grid;
+          align-items: center;
+          row-gap: 10px;
+          padding: 1.5rem;
+          width: 240px;
+          background: var(--secondaryColor);
+          border-radius: 10px;
+          text-align: center;
+
+          .icon {
+            color: var(--primaryColor);
+          }
+
+          h4 {
+            color: var(--pColor);
+            font-size: 18px;
+          }
+
+          .userName {
+            color: var(--greyColor);
+            font-weight: 600;
+          }
+
+          a {
+            justify-content: center;
+            gap: 5px;
+            color: var(--primaryColor);
+            font-weight: 600;
+            cursor: pointer;
+
+            .icon {
+              font-size: 20px;
+            }
+            &:hover {
+              color: var(--pColor);
+
+              .icon {
+                transform: translateX(10px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+
+    .form {
+        width: 100%;
+        justify-content: center;
+        margin: auto;
+
+        h3 {
+            text-align: center;
+            color: var(--primaryColor);
+        }
+
+        form {
+            width: 100%;  
+            text-align: center;    
+            
+            
+        input, textarea {
+            height: 1rem;
+            width: 90%;
+            padding: 1.5rem 0.5rem;
+            border-radius: 10px;
+            background: none;
+            border: 2px solid var(--secondaryColor);
+            margin: 0.5rem 0;
+            outline: none;
+            color: var(--txtColor);
+            font-weight: 600;
+
+            &::placeholder {
+                color: var(--greyColor);
+                opacity: 0.5;
+            }
+        }
+
+        textarea {
+            height: 150px;
+            resize: none;
+
+        }
+
+        .formBtn {
+            display: block;
+            margin: auto;
+            width: 90%;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            padding: 1rem 0;
+            background: var(--primaryColor);
+            color: var(--BgColor);
+            font-weight: 600;
+            cursor: pointer;
+
+            &:hover {
+                background: var(--pColor);
+            }
+
+        }
+        }
+    }
+  }
+}
+
+
+@media screen and (min-width: 640px) {
+  .cards {
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1160px) {
+  .contact {
+    .contactContainer {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: flex-start !important;
+    }
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .contact {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

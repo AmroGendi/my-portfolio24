@@ -1,0 +1,235 @@
+@import url(https://db.onlinewebfonts.com/c/febb3ad29181140b381ac49357890214?family=Etihad+Altis+Book+Book);
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Etihad Altis Book Book", sans-serif;
+    transition: 0.3s ease;
+}
+
+.App {
+    background-color: var(--BgColor);
+}
+
+:root {
+    --primaryColor: #ff3452;
+    --secondaryColor: #ece0c8;
+    --pColor: #282c34;
+    --BgColor: #f6f7f8;
+    --txtColor: #21252b;
+    --greyColor: #6e6e6e;
+    --nbBgColor: hsl(40, 49%, 85%, 50%);
+    --headerHeight: 3rem;
+    --box-shadow: 0 2px 4px hsl(216, 13%, 15%, 50%);
+    --background: linear-gradient(#f6f7f8, hsl(40, 49%, 85%, 50%));
+    --backgroundOp: linear-gradient(hsl(40, 49%, 85%), #f6f7f8);
+  }
+
+  [data-theme="dark"] {
+    --primaryColor: #ff3452;
+    --secondaryColor: black;
+    --pColor: #ece0c8;
+    --BgColor: #1d1d1d;
+    --txtColor: #f6f7f8;
+    --greyColor: white;
+    --nbBgColor: #2b2b2b;
+    --headerHeight: 3rem;
+    --box-shadow: 0 2px 4px hsla(220, 4%, 73%, 0.5);
+    --background: linear-gradient(#3b3b3b, hsla(43, 9%, 40%, 50%));
+    --backgroundOp: linear-gradient(hsl(43, 9%, 40%, 50%), #3b3b3b);
+  }
+
+/* Default Styling */
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-content: center;
+}
+
+.grid {
+    display: grid;
+    align-content: center;
+}
+
+input,
+textarea {
+    font-size: 100%;
+}
+
+.section {
+    padding: 4rem 0 2rem;
+}
+
+.container {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+.icon {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.btn {
+    border: 2px solid var(--primaryColor);
+    border-radius: 10px;
+    padding: 0.25rem 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: relative;
+    background: transparent;
+}
+
+.btn:hover {
+    background: var(--primaryColor);
+    color: var(--txtColor);
+}
+
+.navLink {
+    position: relative;
+}
+
+.navLink::before {
+    content: '';
+    position: absolute;
+    background: var(--primaryColor);
+    height: 2px;
+    width: 0%;
+    bottom: -3px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    background: var(--primaryColor);
+    height: 2px;
+    width: 0%;
+    bottom: -3px;
+    left: 0;
+    transition: 0.8s;
+}
+
+.sectionTitle {
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: var(--txtColor);
+    display: flex;
+    align-items: center;
+}
+
+.titleNumber {
+    color: var(--primaryColor);
+    margin: 0 0.6rem;
+    font-weight: 600;
+}
+
+.titleTxt {
+    position: relative;
+    width: max-content;
+}
+
+.underline {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 35px;
+    left: 0;
+    border-radius: 10px;
+    background: var(--secondaryColor);
+    overflow: hidden;
+}
+
+.underline span {
+    top: 0;
+    left: 10px;
+    width: 10px;
+    border-radius: 10px;
+    height: 100%;
+    position: absolute;
+    background: var(--primaryColor);
+    animation: moveLine 2s linear infinite;
+}
+
+@keyframes moveLine {
+    0% {
+        left: -20px;
+    }
+
+    100% {
+        left: 100px;
+    }
+}
+
+/* --------------------------------------- */
+
+::selection {
+    background-color: var(--primaryColor);
+    color: var(--greyColor);
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background: var(--secondaryColor);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primaryColor);
+
+}
+
+@media screen and (min-width: 769px) {
+    .container {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+
+@media screen and (min-width: 960px) {
+    .section {
+        padding: 6rem 0 4rem;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .section {
+        padding: 6rem 0 4rem;
+    }
+
+    .container {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        zoom: 1;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    body {
+        zoom: 1.7;
+    }
+}

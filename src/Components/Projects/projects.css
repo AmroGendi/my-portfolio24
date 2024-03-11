@@ -1,0 +1,97 @@
+:root {
+  --primaryColor: #ff3452;
+  --secondaryColor: #ece0c8;
+  --pColor: #282c34;
+  --BgColor: #f6f7f8;
+  --txtColor: #21252b;
+  --greyColor: #6e6e6e;
+  --nbBgColor: hsl(40, 49%, 85%, 50%);
+  --headerHeight: 3rem;
+  --box-shadow: 0 2px 4px hsl(216, 13%, 15%, 50%);
+  --background: linear-gradient(#f6f7f8, hsl(40, 49%, 85%, 50%));
+  --backgroundOp: linear-gradient(hsl(40, 49%, 85%), #f6f7f8);
+}
+
+.projects .projectContainer {
+  margin-top: 1rem;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.projects .projectContainer .singleProject {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  border-radius: 10px;
+  height: 100%;
+  background: var(--background);
+  border: 1px solid var(--secondaryColor);
+}
+.projects .projectContainer .singleProject .externalLinks {
+  widows: 100%;
+  justify-content: space-between;
+}
+.projects .projectContainer .singleProject .externalLinks .youtubeIcon a, .projects .projectContainer .singleProject .externalLinks .githubIcon a {
+  color: var(--primaryColor);
+}
+.projects .projectContainer .singleProject .externalLinks .youtubeIcon a:hover, .projects .projectContainer .singleProject .externalLinks .githubIcon a:hover {
+  color: var(--pColor);
+}
+.projects .projectContainer .singleProject:hover {
+  transform: translateY(-7px);
+  border-bottom: 2px solid var(--primaryColor);
+}
+.projects .projectContainer .singleProject .imgDiv {
+  height: 150px;
+  width: auto;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.projects .projectContainer .singleProject .imgDiv img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+.projects .projectContainer .singleProject .imgDiv img:hover {
+  scale: 1.1;
+  transform: translateY(-7px);
+}
+.projects .projectContainer .singleProject .projectTitle {
+  display: flex;
+  font-weight: 600;
+  color: var(--txtColor);
+}
+
+@media screen and (min-width: 600px) {
+  .projects .projectContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects .projectContainer .singleProject .imgDiv {
+    height: 150px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .projects {
+    width: 70%;
+    margin: auto;
+  }
+  .projects .projectContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects .projectContainer .singleProject .imgDiv {
+    height: 180px;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .projects .projectContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1240px) {
+  .projects {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}/*# sourceMappingURL=projects.css.map */

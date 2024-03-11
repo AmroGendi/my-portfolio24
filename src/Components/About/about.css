@@ -1,0 +1,92 @@
+:root {
+  --primaryColor: #ff3452;
+  --secondaryColor: #ece0c8;
+  --pColor: #282c34;
+  --BgColor: #f6f7f8;
+  --txtColor: #21252b;
+  --greyColor: #6e6e6e;
+  --nbBgColor: hsl(40, 49%, 85%, 50%);
+  --headerHeight: 3rem;
+  --box-shadow: 0 2px 4px hsl(216, 13%, 15%, 50%);
+}
+
+.about .sectionContent .txtSection {
+  color: var(--greyColor);
+  font-size: 1.1rem;
+  max-width: 100%;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin: auto;
+}
+.about .sectionContent .txtSection .aboutBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+  background: var(--primaryColor);
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 2px solid var(--primaryColor);
+}
+.about .sectionContent .txtSection .aboutBtn:hover {
+  background: var(--primaryHover);
+}
+.about .sectionContent .txtSection .aboutBtn a {
+  color: var(--secondaryColor);
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+.about .sectionContent .txtSection .aboutBtn a:hover {
+  color: var(--pColor);
+}
+.about .sectionContent .imgDiv {
+  width: 250px;
+  height: 250px;
+  margin: 2rem auto 5rem;
+  overflow: hidden;
+  background-position: 50%;
+  border: 3px solid var(--secondaryColor);
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  box-shadow: 0 0 35px var(--pColor);
+  animation: animate 5s ease-in-out infinite;
+}
+@keyframes animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+.about .sectionContent .imgDiv .aboutImg {
+  width: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 769px) {
+  .about {
+    width: 70%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 960px) {
+  .about .sectionContent {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .about .sectionContent .txtSection h4 {
+    font-size: 1.4rem;
+  }
+}/*# sourceMappingURL=about.css.map */
